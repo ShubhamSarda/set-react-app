@@ -42,7 +42,7 @@ try {
   const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
   packageJson.name = appName; // Update the name field
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2), "utf8");
-  console.log(`Updated package.json with project name: ${appName}`);
+  //console.log(`Updated package.json with project name: ${appName}`);
 } catch (err) {
   console.error(`Error updating package.json: ${err.message}`);
   process.exit(1);
