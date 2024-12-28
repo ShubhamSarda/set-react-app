@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["react", "vite", "create-react-app", "set-react-app"],
   "bin": {
     "set-react-app": "./bin/cli.js"
   },
