@@ -70,7 +70,7 @@ Once inside your project directory, you can run:
 .
 ├── public          # Public assets that are directly served
 ├── src             # Main source code for the application
-│   ├── App.jss     # Root App component
+│   ├── App.jsx     # Root App component
 │   ├── index.jsx    # Entry point for React application
 │   └── ...         # Other components and files
 ├── tests           # Test files (if separated from src)
