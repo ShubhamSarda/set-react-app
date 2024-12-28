@@ -30,7 +30,7 @@ try {
 // Step 2: Copy template files to the new project folder
 try {
   fse.copySync(templatePath, appPath, { overwrite: true });
-  console.log("Template files copied successfully.");
+  console.log("Creating a new React app.");
 } catch (err) {
   console.error(`Error copying template files: ${err.message}`);
   process.exit(1);
@@ -50,9 +50,8 @@ try {
 
 // Step 4: Install dependencies
 try {
-  console.log("Creating a new React app.");
   console.log("\nInstalling packages. This might take a couple of minutes.");
-  console.log("Installing react, react-dom, vite and more...");
+  console.log('Installing \x1b[38;2;135;206;235mreact\x1b[0m, \x1b[38;2;135;206;235mreact-dom\x1b[0m, \x1b[38;2;135;206;235mvite\x1b[0m and more...');
   execSync(`cd "${appPath}" && npm install`, { stdio: "inherit" });
   console.log("Dependencies installed successfully.");
 } catch (err) {
@@ -63,12 +62,13 @@ try {
 console.log(`Your React app is ready!`);
 
 console.log(`\nHere are some important commands:`);
-console.log(`npm start: Starts the development server.`);
-console.log(`npm run build: Builds the project for production, optimizing the output for deployment.`);
-console.log(`npm preview: Starts a local server to preview the production build.`);
+console.log(`\x1b[38;2;135;206;235mnpm start\x1b[0m: Starts the development server.`);
+console.log(`\x1b[38;2;135;206;235mnpm run build\x1b[0m: Builds the project for production, optimizing the output for deployment.`);
+console.log(`\x1b[38;2;135;206;235mnpm preview\x1b[0m: Starts a local server to preview the production build.`);
+
 
 console.log(`\nNext steps:`);
-console.log(`cd ${appName}`);
-console.log(`npm start`);
+console.log(`\x1b[38;2;135;206;235mcd\x1b[0m ${appName}`);
+console.log(`\x1b[38;2;135;206;235mnpm start\x1b[0m`);
 
 console.log(`\nHappy hacking!`);
