@@ -53,9 +53,9 @@ try {
   console.log("\nInstalling packages. This might take a couple of minutes.");
   console.log('Installing \x1b[38;2;135;206;235mreact\x1b[0m, \x1b[38;2;135;206;235mreact-dom\x1b[0m, \x1b[38;2;135;206;235mvite\x1b[0m and more...');
   execSync(`cd "${appPath}" && npm install`, { stdio: "inherit" });
-  console.log("Dependencies installed successfully.");
+  console.log("Packages installed successfully.");
 } catch (err) {
-  console.error(`Error installing dependencies: ${err.message}`);
+  console.error(`Error installing packages: ${err.message}`);
   process.exit(1);
 }
 
@@ -67,7 +67,7 @@ console.log(`\x1b[38;2;135;206;235mnpm run build\x1b[0m: Builds the project for 
 console.log(`\x1b[38;2;135;206;235mnpm preview\x1b[0m: Starts a local server to preview the production build.`);
 
 
-console.log(`\nNext steps:`);
+console.log(`\nWe suggest that you begin by typing:`);
 console.log(`\x1b[38;2;135;206;235mcd\x1b[0m ${appName}`);
 console.log(`\x1b[38;2;135;206;235mnpm start\x1b[0m`);
 
