@@ -14,12 +14,16 @@ Set React App is a lightweight, opinionated setup for building modern React appl
 ## Features
 
 - **Vite-Powered**: Enjoy fast bundling, instant dev server start, and on-demand file serving.  
-- **Latest React & React DOM**: Includes React and React DOM 18.x for modern React development.  
-- **Testing**: Pre-configured with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [Jest DOM](https://github.com/testing-library/jest-dom) for robust unit and integration tests.  
-- **Simple Scripts**: A minimal set of npm scripts for development, production builds, and previews.  
+- **Latest React & React DOM**: Includes React and React DOM 19.x for modern React development.
+- **Testing**: Pre-configured with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [Jest DOM](https://github.com/testing-library/jest-dom) with [Vitest](https://vitest.dev/) for unit and integration tests.
+- **Simple Scripts**: A minimal set of npm scripts for development, production builds, previews, and tests.
 - **Web Vitals**: Measures performance for React apps, integrated out of the box.  
 
 ---
+
+## Requirements
+
+Use Node.js 22.22.2 or later in the 22.x line, 24.15.0 or later in the 24.x line, or Node.js 26 or newer.
 
 ## Steps to Use (Similar to Create React App)
 
@@ -60,7 +64,10 @@ Once inside your project directory, you can run:
   Builds the app for production to the `dist` folder. It bundles React in production mode, optimizes builds for the best performance, and is ready for deployment.  
 
 - **`npm run preview`**  
-  Serves the production build from the `dist` folder locally. Helpful for verifying your production build before deploying.  
+  Serves the production build from the `dist` folder locally. Helpful for verifying your production build before deploying.
+
+- **`npm test`**
+  Runs the test suite once with Vitest.
 
 ---
 
@@ -87,23 +94,21 @@ Feel free to modify this structure based on your project’s needs.
 
 ```jsonc
 "dependencies": {
-  "react": "^18.2.0",
-  "react-dom": "^18.2.0",
-  "web-vitals": "^2.1.4"
+  "react": "^19.3.1",
+  "react-dom": "^19.3.1",
+  "web-vitals": "^6.2.3"
 },
 "devDependencies": {
-  "@testing-library/jest-dom": "^5.16.5",
-  "@testing-library/react": "^13.4.0",
-  "@testing-library/user-event": "^13.5.0",
-  "@vitejs/plugin-react": "^4.0.0",
-  "vite": "^4.3.0"
+  "@testing-library/dom": "^10.4.2",
+  "@testing-library/jest-dom": "^8.0.0",
+  "@testing-library/react": "^16.3.3",
+  "@testing-library/user-event": "^14.6.13",
+  "@vitejs/plugin-react": "^6.3.0",
+  "jsdom": "^31.0.1",
+  "vite": "^8.3.8",
+  "vitest": "^5.1.1"
 }
 ```
-
-- **React & React DOM** (18.2.x)  
-- **Web Vitals** (2.1.4)  
-- **Testing Libraries** (@testing-library suite, jest-dom)  
-- **Vite** (4.3.0) and **@vitejs/plugin-react** (4.0.0)  
 
 ---
 

@@ -30,6 +30,7 @@ try {
 // Step 2: Copy template files to the new project folder
 try {
   fse.copySync(templatePath, appPath, { overwrite: true });
+  fs.renameSync(path.join(appPath, "gitignore"), path.join(appPath, ".gitignore"));
   console.log("Creating a new React app.");
 } catch (err) {
   console.error(`Error copying template files: ${err.message}`);
@@ -64,8 +65,10 @@ console.log(`Your React app is ready!`);
 console.log(`\nHere are some important commands:`);
 console.log(`\x1b[38;2;135;206;235mnpm start\x1b[0m: Starts the development server.`);
 console.log(`\x1b[38;2;135;206;235mnpm run build\x1b[0m: Builds the project for production, optimizing the output for deployment.`);
-console.log(`\x1b[38;2;135;206;235mnpm preview\x1b[0m: Starts a local server to preview the production build.`);
+console.log(`\x1b[38;2;135;206;235mnpm run preview\x1b[0m: Starts a local server to preview the production build.`);
 
+
+console.log(`\x1b[38;2;135;206;235mnpm test\x1b[0m: Runs the tests once.`);
 
 console.log(`\nWe suggest that you begin by typing:`);
 console.log(`\x1b[38;2;135;206;235mcd\x1b[0m ${appName}`);
