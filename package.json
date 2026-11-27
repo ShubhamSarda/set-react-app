@@ -1,11 +1,16 @@
 {
   "name": "set-react-app",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["react", "vite", "create-react-app", "set-react-app"],
+  "keywords": [
+    "react",
+    "vite",
+    "create-react-app",
+    "set-react-app"
+  ],
   "bin": {
     "set-react-app": "./bin/cli.js"
   },
