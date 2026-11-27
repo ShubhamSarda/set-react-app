@@ -17,7 +17,6 @@ Set React App is a lightweight, opinionated setup for building modern React appl
 - **Latest React & React DOM**: Includes React and React DOM 19.x for modern React development.
 - **Testing**: Pre-configured with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [Jest DOM](https://github.com/testing-library/jest-dom) with [Vitest](https://vitest.dev/) for unit and integration tests.
 - **Simple Scripts**: A minimal set of npm scripts for development, production builds, previews, and tests.
-- **Web Vitals**: Measures performance for React apps, integrated out of the box.  
 
 ---
 
@@ -75,12 +74,12 @@ Once inside your project directory, you can run:
 
 ```bash
 .
-├── public          # Public assets that are directly served
 ├── src             # Main source code for the application
 │   ├── App.jsx     # Root App component
 │   ├── index.jsx    # Entry point for React application
-│   └── ...         # Other components and files
-├── tests           # Test files (if separated from src)
+│   ├── App.test.jsx # Starter test
+│   └── index.css   # Shared styles
+├── index.html
 ├── package.json
 ├── vite.config.js  # Vite configuration
 └── ...
@@ -95,14 +94,12 @@ Feel free to modify this structure based on your project’s needs.
 ```jsonc
 "dependencies": {
   "react": "^19.3.1",
-  "react-dom": "^19.3.1",
-  "web-vitals": "^6.2.3"
+  "react-dom": "^19.3.1"
 },
 "devDependencies": {
   "@testing-library/dom": "^10.4.2",
   "@testing-library/jest-dom": "^8.0.0",
   "@testing-library/react": "^16.3.3",
-  "@testing-library/user-event": "^14.6.13",
   "@vitejs/plugin-react": "^6.3.0",
   "jsdom": "^31.0.1",
   "vite": "^8.3.8",
