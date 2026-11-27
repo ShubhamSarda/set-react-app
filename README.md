@@ -30,7 +30,7 @@ Use Node.js 22.22.2 or later in the 22.x line, 24.15.0 or later in the 24.x line
 Create a new project with npx.
 
 ```bash
-npx set-react-app project-name
+npx set-react-app@latest project-name
 cd project-name
 npm start
 ```
