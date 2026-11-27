@@ -17,6 +17,7 @@ Set React App is a lightweight, opinionated setup for building modern React appl
 - **Latest React & React DOM**: Includes React and React DOM 19.x for modern React development.
 - **Testing**: Pre-configured with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [Jest DOM](https://github.com/testing-library/jest-dom) with [Vitest](https://vitest.dev/) for unit and integration tests.
 - **Simple Scripts**: A minimal set of npm scripts for development, production builds, previews, and tests.
+- **Web Vitals**: Measures performance for React apps, integrated out of the box.  
 
 ---
 
@@ -24,31 +25,17 @@ Set React App is a lightweight, opinionated setup for building modern React appl
 
 Use Node.js 22.22.2 or later in the 22.x line, 24.15.0 or later in the 24.x line, or Node.js 26 or newer.
 
-## Steps to Use (Similar to Create React App)
+## Get started
 
-1. **Install Globally (Optional)**  
-   ```bash
-   npm install -g set-react-app
-   ```
-   This allows using the `set-react-app` command system-wide.
+Create a new project with npx.
 
-2. **Create a New Project**  
-   ```bash
-   npx set-react-app project-name
-   # or if you installed globally:
-   set-react-app project-name
-   ```
+```bash
+npx set-react-app project-name
+cd project-name
+npm start
+```
 
-3. **Move into the Newly Created Directory**  
-   ```bash
-   cd project-name
-   ```
-
-4. **Start the Development Server**  
-   ```bash
-   npm start
-   ```
-   This will start the Vite dev server on **[http://localhost:3000](http://localhost:3000)** by default.
+The development server opens at [http://localhost:3000](http://localhost:3000).
 
 ---
 
@@ -74,12 +61,12 @@ Once inside your project directory, you can run:
 
 ```bash
 .
+├── public          # Public assets that are directly served
 ├── src             # Main source code for the application
 │   ├── App.jsx     # Root App component
 │   ├── index.jsx    # Entry point for React application
-│   ├── App.test.jsx # Starter test
-│   └── index.css   # Shared styles
-├── index.html
+│   └── ...         # Other components and files
+├── tests           # Test files (if separated from src)
 ├── package.json
 ├── vite.config.js  # Vite configuration
 └── ...
@@ -94,12 +81,14 @@ Feel free to modify this structure based on your project’s needs.
 ```jsonc
 "dependencies": {
   "react": "^19.3.1",
-  "react-dom": "^19.3.1"
+  "react-dom": "^19.3.1",
+  "web-vitals": "^6.2.3"
 },
 "devDependencies": {
   "@testing-library/dom": "^10.4.2",
   "@testing-library/jest-dom": "^8.0.0",
   "@testing-library/react": "^16.3.3",
+  "@testing-library/user-event": "^14.6.13",
   "@vitejs/plugin-react": "^6.3.0",
   "jsdom": "^31.0.1",
   "vite": "^8.3.8",

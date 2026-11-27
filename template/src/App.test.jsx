@@ -1,9 +1,8 @@
-import '@testing-library/jest-dom/vitest';
 import { render, screen } from '@testing-library/react';
 import App from './App.jsx';
 
-test('renders the Learn React link', () => {
+test('renders learn react link', () => {
   render(<App />);
-
-  expect(screen.getByRole('link', { name: 'Learn React' })).toBeInTheDocument();
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
 });

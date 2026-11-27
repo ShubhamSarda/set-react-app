@@ -8,7 +8,7 @@ const fse = require("fs-extra");
 const appName = process.argv[2];
 
 if (!appName) {
-  console.error("Please provide a project name: npm set-react-app my-app");
+  console.error("Provide a project name by running npx set-react-app my-app.");
   process.exit(1);
 }
 
